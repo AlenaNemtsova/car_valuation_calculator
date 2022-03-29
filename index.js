@@ -40,7 +40,7 @@ function getSelectedItems() {
             currentPrice = Number(p.value);
         }
 
-    sum = sum + currentPrice;
+    sum += currentPrice;
     }
 
     document.getElementById('result').innerText = "Стоимость автомобиля " + sum + " у.е.";
