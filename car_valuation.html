@@ -1,55 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <h1>Рассчёт стоимости автомобиля</h1>
+  </head>
+  <body>
+    <h1>Расчёт стоимости автомобиля</h1>
 
-    <select name="" id="makes" class="select" onchange="selectMake(this)"> 
-        <!-- в this передается весь тег, в котором написана функция, т.е. весь select со всеми options. -->
-        <option value="none">Марка</option>
-        <option value="audi">Audi</option>  
-        <option value="bmw">BMW</option>
+    <select name="" id="makes" class="select" onchange="selectMake(this)">
+      <!-- в this передается весь тег, в котором написана функция, т.е. весь select со всеми options. -->
+      <option value="none">Марка</option>
+      <option value="audi">Audi</option>
+      <option value="bmw">BMW</option>
     </select>
 
     <select id="models" class="select">
-        <option value="" id="">Модель</option>
+      <option value="" id="">Модель</option>
     </select>
-
 
     <select name="" id="engine" class="selectVal">
-        <option value="">Топливо</option>
-        <option value="0">Дизель</option>
-        <option value="200">Безнин</option>
-        <option value="400">Электро</option>
+      <option value="">Топливо</option>
+      <option value="0">Дизель</option>
+      <option value="200">Безнин</option>
+      <option value="400">Электро</option>
     </select>
 
     <form action="">
-        <input type="radio" name="transmission" value="0" class="selectVal" checked>Механика
-        <input type="radio" name="transmission" value="150" class="selectVal">Автомат
-    </form>
-    
-    <form action="">
-        <input type="radio" name="kms" value="0" class="selectVal" id="" checked>0 - 50
-        <input type="radio" name="kms" value="-20" class="selectVal" id="">51 - 100
-        <input type="radio" name="kms" value="-30" class="selectVal" id="">101 - 200
-        <input type="radio" name="kms" value="-50" class="selectVal" id="">200+
+      <input
+        type="radio"
+        name="transmission"
+        value="0"
+        class="selectVal"
+        checked
+      />Механика
+      <input
+        type="radio"
+        name="transmission"
+        value="150"
+        class="selectVal"
+      />Автомат
     </form>
 
     <form action="">
-        <input type="checkbox" name="package" value="100" class="selectVal" id="">климат-контроль<br>
-        <input type="checkbox" name="package" value="100" class="selectVal" id="">подогрев сидений
-        <input type="checkbox" name="package" value="100" class="selectVal" id="">парковочные датчики
-        <input type="checkbox" name="package" value="100" class="selectVal" id="">электронная система стабилизации
+      <input
+        type="radio"
+        name="kms"
+        value="0"
+        class="selectVal"
+        id=""
+        checked
+      />0 - 50
+      <input type="radio" name="kms" value="-20" class="selectVal" id="" />51 -
+      100
+      <input type="radio" name="kms" value="-30" class="selectVal" id="" />101 -
+      200
+      <input type="radio" name="kms" value="-50" class="selectVal" id="" />200+
+    </form>
+
+    <form action="">
+      <input
+        type="checkbox"
+        name="package"
+        value="100"
+        class="selectVal"
+        id=""
+      />климат-контроль<br />
+      <input
+        type="checkbox"
+        name="package"
+        value="100"
+        class="selectVal"
+        id=""
+      />подогрев сидений
+      <input
+        type="checkbox"
+        name="package"
+        value="100"
+        class="selectVal"
+        id=""
+      />парковочные датчики
+      <input
+        type="checkbox"
+        name="package"
+        value="100"
+        class="selectVal"
+        id=""
+      />электронная система стабилизации
     </form>
 
     <div id="result"></div>
     <button onclick="getSelectedItems()">Узнать цену</button>
 
     <script src="index.js"></script>
-</body>
+  </body>
 </html>
